@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/timg"
+    tools:context=".MainActivity">
+
+    <com.wlj.paintboardview.paint.PaintBoardView
+        android:id="@+id/paint_board_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_pen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="画笔" />
+
+        <RadioButton
+            android:id="@+id/rb_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="线段" />
+
+        <RadioButton
+            android:id="@+id/rb_rect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="矩形" />
+
+        <RadioButton
+            android:id="@+id/rb_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="圆形" />
+
+        <RadioButton
+            android:id="@+id/rb_curve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="曲线" />
+
+        <RadioButton
+            android:id="@+id/rb_eraser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="橡皮擦" />
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/ll_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onFinish"
+            android:text="完成" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCancel"
+            android:text="取消" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBack"
+            android:text="回退" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClean"
+            android:text="清空" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onSave"
+            android:text="保存" />
+
+        <CheckBox
+            android:id="@+id/cb_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="填充绘制" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="红" />
+
+        <RadioButton
+            android:id="@+id/rb_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绿" />
+
+        <RadioButton
+            android:id="@+id/rb_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝" />
+
+
+    </RadioGroup>
+
+</RelativeLayout>
